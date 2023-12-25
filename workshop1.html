@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title> Workshop HTML-FORM</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="mystyle.css"/>
+
+</head>
+<style>
+    body {
+        background: url(https://www.creativefabrica.com/wp-content/uploads/2020/04/06/abstract-white-background-Graphics-3802722-1.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100%;
+      
+    }
+    </style>
+<body  >
+    <form action="#">
+        <fieldset style="width:50%;" >
+            <legend style="font-size: 200%;">
+            
+                Workshop HTML-FORM
+            </legend>
+            <table>
+                <tr style="font-size: large;">
+                    <td><label>ชื่อ</label></td>
+                    <br>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td><label>สกุล</label></td>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td><label>วัน/เดือน/ปีเกิด</label></td>
+                    <td> <input type="date"/></td>  
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td><label>อายุ</label></td>
+                    <td><input type="number"></td>
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td><label>เพศ</label></td>
+                    <td>
+                        <input id="male radio" type="radio" name="same_radio" />
+                        <label for="male radio">ชาย</label>
+                        <input id="female radio" type="radio" name="same_radio" />
+                        <label for="female radio">หญิง</label>
+                    </td>
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td><label>รูป</label></td>
+                    <td><input type="file"></td>
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td><label>ที่อยู่</label></td>
+                    <td><textarea rows="4" placeholder="กรุณาป้อนข้อมูล"></textarea></td>
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td><label>สีที่ชอบ</label></td>
+
+                    <td>
+                        <select name="colour" id="colour" size="large">
+                            <option value="red">แดง</option>
+                            <option value="blue">ฟ้า</option>
+                            <option value="greeen">เขียว</option>
+                            <option value="black">ดำ</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td><label>แนวเพลงที่ชอบ</label></td>
+                    <td>
+                        <input id="life radio" type="radio" name="same_radio" />
+                        <label for="life radio">เพื่อชีวิต</label>
+                        <input id="rooktung radio" type="radio" name="same_radio" />
+                        <label for="rooktung radio">ลูกทุ่ง</label>
+                        <input id="etc radio" type="radio" name="same_radio" />
+                        <label for="etc radio">อื่นๆ</label>
+                    </td>
+                </tr>
+
+                <tr style="font-size: large;">
+                    <td>
+                        <br>
+                        <input type="checkbox">ยินยอมให้เก็บข้อมูล
+                    </td>
+                </tr>
+
+                <tr> 
+                    <td>
+                        
+                        <br>
+                        <input type="reset" value="Reset" style="background-color:indianred;" style="size: 200px;">
+                    </td>
+                    <td>
+                        
+                        <br>
+                        &emsp;
+                        <input type="submit" value="submit" style="background-color: aquamarine;" style="color: black ;">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
