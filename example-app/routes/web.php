@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
-|*/
+|
+*/
 
 Route::get('/login', [MyAuth::class, 'login_view'])->name('login');
 Route::get('/register', [MyAuth::class, 'register_view']);
@@ -27,6 +28,7 @@ Route::resource('titles', C_titles::class)->middleware('auth');
 Route::middleware('auth')->group(function(){
     // auth first
 });
+Route::get('/my-controller', [MyController::class, 'index']);
 
 Route::get('/my-controller2', 'App\Http\Controllers\MyController@index');
 Route::namespace('App\Http\Controllers')->group(function(){
@@ -41,13 +43,15 @@ Route::get('/', function () {
     return view('welcome'); // welcome.blade.php
 });
 
+// use Illuminate\Http\Request;
 
 Route::get('/my-route', function(){
     // return view('myroute');
     //        Key    =>  Value
     $data = ['val_a' => 'Hello World!'];
     $data['val_b'] = "Laravel";
-    return view('myfolder.mypage',$data);});
+    return view('myfolder.mypage',$data);
+});
 
 
 Route::post('/my-route', function(Request $req){
